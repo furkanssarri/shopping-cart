@@ -1,16 +1,15 @@
-import React from "react";
+import styles from "./ProductThumbNail.module.css";
 
-const ProductThumbNail = ({ title, price, description, image, rating }) => {
+const ProductThumbNail = ({ title, price, image, rating }) => {
   return (
-    <div>
-      <div>
+    <>
+      <div className={styles.productThumbNail}>
         <img src={image} alt={title} />
         <p>{title}</p>
-        <p>{description}</p>
         <p>{price}</p>
         <span>{rating}</span>
       </div>
-    </div>
+    </>
   );
 };
 

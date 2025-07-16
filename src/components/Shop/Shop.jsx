@@ -26,7 +26,6 @@ const Shop = () => {
                 <ProductThumbNail
                   title={item.title}
                   price={item.price}
-                  description={item.description}
                   image={item.image}
                   rating={item.rating.rate}
                 />

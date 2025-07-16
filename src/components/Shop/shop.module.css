@@ -1,3 +1,19 @@
 .container {
   padding: 0.5rem;
 }
+
+.container ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center; /* optional: center the thumbnails */
+}
+
+.container ul li {
+  flex: 0 1 320px; /* allows wrapping, width based on thumbnail size + margin */
+  display: flex;
+  justify-content: center;
+}
