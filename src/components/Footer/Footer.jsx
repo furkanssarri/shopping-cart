@@ -1,12 +1,11 @@
-import headerStyles from "../Header/header.module.css";
-import footerStyles from "./footer.module.css";
+import style from "./footer.module.css";
 import { NavLink } from "react-router-dom";
 import Logo from "../Header/Logo";
 
 const Footer = () => {
   return (
     <footer>
-      <div className={`${footerStyles.logo} ${headerStyles.logo}`}>
+      <div className={`${style.logo} ${style.logo}`}>
         <Logo />
       </div>
       <nav>
@@ -14,9 +13,7 @@ const Footer = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                `$${headerStyles.navLink} ${
-                  isActive ? `${headerStyles.active}` : ""
-                }`
+                `${style.navLink} ${isActive ? `${style.active}` : ""}`
               }
               to={`/`}
             >
@@ -26,9 +23,7 @@ const Footer = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                `${footerStyles.navLink} ${headerStyles.navLink} ${
-                  isActive ? `${headerStyles.active}` : ""
-                }`
+                `${style.navLink} ${isActive ? `${style.active}` : ""}`
               }
               to={`about`}
             >
@@ -38,9 +33,7 @@ const Footer = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                `${footerStyles.navLink} ${headerStyles.navLink} ${
-                  isActive ? `${headerStyles.active}` : ""
-                }`
+                `${style.navLink}  ${isActive ? `${style.active}` : ""}`
               }
               to={`shop`}
             >
@@ -50,9 +43,7 @@ const Footer = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                `${footerStyles.navLink} ${headerStyles.navLink} ${
-                  isActive ? `${headerStyles.active}` : ""
-                }`
+                `${style.navLink} ${isActive ? `${style.active}` : ""}`
               }
               to={`cart`}
             >

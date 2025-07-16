@@ -1,5 +1,18 @@
 footer {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  padding: 0 1rem;
+  /* width: 100%; */
+}
+
+.navLink {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: beige;
 }
