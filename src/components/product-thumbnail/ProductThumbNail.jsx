@@ -1,4 +1,4 @@
-import styles from "./ProductThumbNail.module.css";
+import styles from "./productThumbNail.module.css";
 
 const ProductThumbNail = ({ title, price, image, rating }) => {
   return (
