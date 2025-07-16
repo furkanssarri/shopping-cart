@@ -1,17 +1,18 @@
-import styles from "./footer.module.css";
+import headerStyles from "../Header/header.module.css";
+import footerStyles from "./footer.module.css";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
-      <div className={styles.logo}>LOGO</div>
+      <div className={`${footerStyles.logo} ${headerStyles.logo}`}>LOGO</div>
       <nav>
         <ul>
           <li>
             <NavLink
-              className={({ isActive, isPending }) =>
-                `${styles.navLink} ${
-                  isActive ? styles.active : isPending ? styles.pendin : ""
+              className={({ isActive }) =>
+                `$${headerStyles.navLink} ${
+                  isActive ? `${headerStyles.active}` : ""
                 }`
               }
               to={`/`}
@@ -21,9 +22,9 @@ const Footer = () => {
           </li>
           <li>
             <NavLink
-              className={({ isActive, isPending }) =>
-                `${styles.navLink} ${
-                  isActive ? styles.active : isPending ? styles.pendin : ""
+              className={({ isActive }) =>
+                `${footerStyles.navLink} ${headerStyles.navLink} ${
+                  isActive ? `${headerStyles.active}` : ""
                 }`
               }
               to={`about`}
@@ -33,9 +34,9 @@ const Footer = () => {
           </li>
           <li>
             <NavLink
-              className={({ isActive, isPending }) =>
-                `${styles.navLink} ${
-                  isActive ? styles.active : isPending ? styles.pendin : ""
+              className={({ isActive }) =>
+                `${footerStyles.navLink} ${headerStyles.navLink} ${
+                  isActive ? `${headerStyles.active}` : ""
                 }`
               }
               to={`shop`}
@@ -45,9 +46,9 @@ const Footer = () => {
           </li>
           <li>
             <NavLink
-              className={({ isActive, isPending }) =>
-                `${styles.navLink} ${
-                  isActive ? styles.active : isPending ? styles.pendin : ""
+              className={({ isActive }) =>
+                `${footerStyles.navLink} ${headerStyles.navLink} ${
+                  isActive ? `${headerStyles.active}` : ""
                 }`
               }
               to={`cart`}

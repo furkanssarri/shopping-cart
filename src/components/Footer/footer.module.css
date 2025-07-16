@@ -3,15 +3,3 @@ footer {
   justify-content: space-between;
   width: 100%;
 }
-
-.logo {
-  composes: logo from "../header/header.module.css";
-}
-
-.navLink {
-  composes: navLink from "../header/header.module.css";
-}
-
-.active {
-  composes: active from "../header/header.module.css";
-}
