@@ -43,8 +43,8 @@ in order to run this, you will need to have:
 1. clone the repo
 
 ```bash
-  git clone <github-repo>
-  cd <root-directory>
+git clone <github-repo>
+cd <root-directory>
 ```
 
 2. install dependencies
