@@ -18,14 +18,14 @@ const Shop = () => {
       <div className={styles.container}>
         {data &&
           data.map((item) => (
-            <Link key={item.id} to={`/:${item.id}`}>
-              <ProductThumbNail
-                title={item.title}
-                price={item.price}
-                image={item.image}
-                rating={item.rating.rate}
-              />
-            </Link>
+            <ProductThumbNail
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              price={item.price}
+              image={item.image}
+              rating={item.rating}
+            />
           ))}
         <Outlet />
       </div>

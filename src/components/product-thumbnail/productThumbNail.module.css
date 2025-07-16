@@ -3,15 +3,24 @@
   border-radius: 3px;
   padding: 0.5rem;
   box-shadow: rgba(40, 40, 43, 0.2) 0px 7px 29px 0px;
-  max-width: 200px;
-  min-height: 400px;
-}
-
-p {
-  margin: 0;
+  width: 300px;
 }
 
 img {
   width: 200px;
   height: 200px;
+}
+
+p {
+  margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+span {
+  color: #858585;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
