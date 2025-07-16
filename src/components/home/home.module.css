@@ -2,3 +2,16 @@
   margin: 1rem;
   padding: 1rem;
 }
+
+.redirect {
+  padding: 0.6rem 1.1rem;
+  background-color: #646cff;
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.redirect:hover {
+  background-color: white;
+  border: 2px solid #646cff;
+}

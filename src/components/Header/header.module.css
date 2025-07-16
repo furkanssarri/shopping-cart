@@ -22,11 +22,11 @@ ul li {
 .navLink {
   padding: 0.5rem;
   margin: 0.5rem;
-  background-color: aliceblue;
-  color: black;
+  background-color: #646cff;
+  color: white;
   border-radius: 5px;
 }
 
 .active {
-  background-color: beige;
+  background-color: #888de6;
 }
