@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  width: calc(100vw - 4rem);
+  min-width: 100vw;
 }
 
 .logo {
