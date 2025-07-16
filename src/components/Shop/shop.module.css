@@ -1,5 +1,9 @@
 .container {
   padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .container ul {

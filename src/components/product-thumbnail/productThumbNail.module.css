@@ -1,9 +1,16 @@
-.productThumbNail {
-  width: 300px;
-  height: 300px;
+.container {
+  border: 0.5px solid #efefef;
+  border-radius: 3px;
+  padding: 0.5rem;
+  box-shadow: rgba(40, 40, 43, 0.2) 0px 7px 29px 0px;
+  max-width: 200px;
+}
+
+p {
+  margin: 0;
 }
 
 img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
 }

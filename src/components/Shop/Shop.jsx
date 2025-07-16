@@ -5,36 +5,32 @@ import { useEffect } from "react";
 import ProductThumbNail from "../product-thumbnail/ProductThumbNail";
 
 const Shop = () => {
-  const { data, error, isLoading } = useData();
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  const { data, error, isLoading } = useData(
+    "https://fakestoreapi.com/products",
+  );
 
   if (error) return <p>{error}</p>;
 
   if (isLoading) return <p>Loading data...</p>;
 
   return (
-    <div className={styles.container}>
+    <>
       <h1>Products</h1>
-      <ul>
+      <div className={styles.container}>
         {data &&
           data.map((item) => (
-            <li key={item.id}>
-              <Link to={`/:${item.id}`}>
-                <ProductThumbNail
-                  title={item.title}
-                  price={item.price}
-                  image={item.image}
-                  rating={item.rating.rate}
-                />
-              </Link>
-            </li>
+            <Link key={item.id} to={`/:${item.id}`}>
+              <ProductThumbNail
+                title={item.title}
+                price={item.price}
+                image={item.image}
+                rating={item.rating.rate}
+              />
+            </Link>
           ))}
-      </ul>
-      <Outlet />
-    </div>
+        <Outlet />
+      </div>
+    </>
   );
 };
 

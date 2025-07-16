@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function useData() {
+export default function useData(url) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -9,10 +9,7 @@ export default function useData() {
     const controller = new AbortController();
     const getData = async () => {
       try {
-        const response = await fetch(
-          `https://fakestoreapi.com/products`,
-          controller.signal,
-        );
+        const response = await fetch(url, controller.signal);
         if (!response.ok) {
           setError("Error: cannot find the product");
           setData(null);
