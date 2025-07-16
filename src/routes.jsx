@@ -21,7 +21,7 @@ const routes = [
         element: <Shop />,
         children: [
           {
-            path: ":productId",
+            path: ":id",
             element: <Product />,
           },
         ],
