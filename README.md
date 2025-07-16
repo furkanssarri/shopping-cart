@@ -68,6 +68,12 @@ shopping-cart/
     ├── App.jsx
     ├── routes.jsx
     ├── components/
+    │   ├── Button/
+    │   │   ├── button.css
+    │   │   ├── icons.jsx
+    │   │   ├── index.jsx
+    │   │   ├── styles.jsx
+    │   │   └── footer.module.css
     │   ├── Footer/
     │   │   ├── Footer.jsx
     │   │   └── footer.module.css
