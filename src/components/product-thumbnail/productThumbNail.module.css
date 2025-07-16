@@ -4,6 +4,7 @@
   padding: 0.5rem;
   box-shadow: rgba(40, 40, 43, 0.2) 0px 7px 29px 0px;
   max-width: 200px;
+  min-height: 400px;
 }
 
 p {
