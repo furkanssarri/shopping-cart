@@ -1,11 +1,14 @@
 import headerStyles from "../Header/header.module.css";
 import footerStyles from "./footer.module.css";
 import { NavLink } from "react-router-dom";
+import Logo from "../Header/Logo";
 
 const Footer = () => {
   return (
     <footer>
-      <div className={`${footerStyles.logo} ${headerStyles.logo}`}>LOGO</div>
+      <div className={`${footerStyles.logo} ${headerStyles.logo}`}>
+        <Logo />
+      </div>
       <nav>
         <ul>
           <li>
