@@ -1,7 +1,6 @@
 import styles from "./shop.module.css";
 import { Link, Outlet } from "react-router-dom";
 import useData from "../../utils/useData";
-import { useEffect } from "react";
 import ProductThumbNail from "../product-thumbnail/ProductThumbNail";
 
 const Shop = () => {
