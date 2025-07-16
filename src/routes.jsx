@@ -1,10 +1,10 @@
 import App from "./App";
-import About from "./components/about/About";
-import Cart from "./components/Cart/Cart";
-import ErrorPage from "./components/ErrorPage";
-import Home from "./components/home/Home";
-import Product from "./components/Product/Product";
-import Shop from "./components/Shop/Shop";
+import About from "./pages/about/About";
+import Cart from "./pages/Cart/Cart";
+import ErrorPage from "./pages/ErrorPage";
+import Home from "./pages/home/Home";
+import Product from "./pages/Product/Product";
+import Shop from "./pages/Shop/Shop";
 
 const routes = [
   {

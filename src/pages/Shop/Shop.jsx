@@ -1,7 +1,7 @@
 import styles from "./shop.module.css";
 import { Link, Outlet } from "react-router-dom";
 import useData from "../../utils/useData";
-import ProductThumbNail from "../product-thumbnail/ProductThumbNail";
+import ProductThumbNail from "../../components/product-thumbnail/ProductThumbNail";
 
 const Shop = () => {
   const { data, error, isLoading } = useData(
