@@ -27,7 +27,7 @@ const Footer = () => {
               }
               to={`about`}
             >
-              About us
+              About
             </NavLink>
           </li>
           <li>

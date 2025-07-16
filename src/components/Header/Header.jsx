@@ -33,7 +33,7 @@ const Header = () => {
                 }
                 to={`about`}
               >
-                About us
+                About
               </NavLink>
             </li>
             <li>
