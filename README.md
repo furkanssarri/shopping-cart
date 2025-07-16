@@ -58,3 +58,43 @@ npm install
 ```bash
 npm run dev
 ```
+
+## folder structure
+
+```
+shopping-cart/
+└── src/
+    ├── App.css
+    ├── App.jsx
+    ├── routes.jsx
+    ├── components/
+    │   ├── Footer/
+    │   │   ├── Footer.jsx
+    │   │   └── footer.module.css
+    │   ├── Header/
+    │   │   ├── Header.jsx
+    │   │   ├── header.module.css
+    │   │   └── Logo.jsx
+    │   └── product-thumbnail/
+    │       ├── ProductThumbNail.jsx
+    │       └── productThumbNail.module.css
+    ├── pages/
+    │   ├── ErrorPage.jsx
+    │   ├── about/
+    │   │   ├── About.jsx
+    │   │   └── about.module.css
+    │   ├── Cart/
+    │   │   ├── Cart.jsx
+    │   │   └── cart.module.css
+    │   ├── home/
+    │   │   ├── Home.jsx
+    │   │   └── home.module.css
+    │   ├── Product/
+    │   │   ├── Product.jsx
+    │   │   └── product.module.css
+    │   └── Shop/
+    │       ├── Shop.jsx
+    │       └── shop.module.css
+    └── utils/
+        └── useData.js
+```
