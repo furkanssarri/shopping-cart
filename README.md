@@ -1,4 +1,4 @@
-# LAYERUP.
+# LAYERUP
 
 a modern e-commerce application built with react and vite. this project aims to demonstrate react concepts as well as fetch management.
 
@@ -110,4 +110,4 @@ shopping-cart/
         └── useData.js
 ```
 
-[↑ back to top](#LAYERUP.)
+[↑ back to top](#layerup)
