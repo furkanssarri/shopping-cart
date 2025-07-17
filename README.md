@@ -35,7 +35,7 @@ you can install and start contributing to this project by following the steps be
 
 ### pre-requisites
 
-apart from nodejs and npm, below are some of the dependencies:
+apart from [nodejs](https://nodejs.org/) and [npm](https://www.npmjs.com/), below are some of the dependencies:
 
 ```json
 "dependencies": {
