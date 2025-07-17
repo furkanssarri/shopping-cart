@@ -35,10 +35,15 @@ you can install and start contributing to this project by following the steps be
 
 ### pre-requisites
 
-in order to run this, you will need to have:
+apart from nodejs and npm, below are some of the dependencies:
 
-- [nodejs](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/)
+```json
+"dependencies": {
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.6.3",
+    "styled-components": "^6.1.19",
+},
+```
 
 1. clone the repo
 
