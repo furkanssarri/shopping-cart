@@ -1,6 +1,6 @@
 # LAYERUP
 
-a modern e-commerce application built with react and vite. this project aims to demonstrate react concepts as well as fetch management.
+a simple e-commerce application built with react and vite. this project aims to demonstrate react concepts as well as fetch management.
 
 ## demo
 
@@ -16,6 +16,7 @@ this project features the following:
 - **shopping cart**: add or remove items to the cart
 - **responsive design**: mobil-first gui
 - **modern routing**: routing for modern spa
+- **react context api**: context to provide information througout the app
 
 ### tech stack
 
@@ -109,5 +110,10 @@ shopping-cart/
     └── utils/
         └── useData.js
 ```
+
+## acknowledgements
+
+- [react-button-component](https://github.com/K-Kelvin/react-button-component) by [k-kelvin](https://github.com/K-Kelvin) for the elegant reusable button component,
+- [fakestore-api](https://fakestoreapi.com/) by [mohammad-reza-keikaavousi](https://github.com/keikaavousi) for the actual fakestore api
 
 [↑ back to top](#layerup)
