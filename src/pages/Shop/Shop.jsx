@@ -16,17 +16,7 @@ const Shop = () => {
     <>
       <h1>Products</h1>
       <div className={styles.container}>
-        {data &&
-          data.map((item) => (
-            <ProductThumbNail
-              key={item.id}
-              id={item.id}
-              title={item.title}
-              price={item.price}
-              image={item.image}
-              rating={item.rating}
-            />
-          ))}
+        {data && data.map((item) => <ProductThumbNail item={item} />)}
         <Outlet />
       </div>
     </>

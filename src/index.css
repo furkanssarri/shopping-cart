@@ -19,7 +19,9 @@ a {
   text-decoration: inherit;
 }
 a:hover {
+  border: 2px solid #747bff;
   color: #747bff;
+  background-color: white;
 }
 
 body {
