@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./productThumbNail.module.css";
 import Button from "../Button/index";
 
-const ProductThumbNail = ({ item }) => {
+const ProductThumbNail = ({ item, onAddToCart }) => {
   return (
     <>
       <div className={styles.container}>
@@ -18,6 +18,7 @@ const ProductThumbNail = ({ item }) => {
           startIcon="local_grocery_store"
           variant="outline"
           color="primary"
+          onClick={() => onAddToCart(item)}
         >
           Add to cart
         </Button>
