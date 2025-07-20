@@ -30,3 +30,24 @@ ul li {
 .active {
   background-color: #888de6;
 }
+
+.navCartAmount {
+  display: inline-block;
+  min-width: 0.5rem;
+  padding: 0.15rem 0.4rem;
+  margin-left: 0.2rem;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: #000;
+  background: #e7de3c;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.15);
+  vertical-align: middle;
+  line-height: 1.2;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.navCartAmount:empty {
+  display: none;
+}

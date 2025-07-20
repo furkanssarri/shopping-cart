@@ -1,8 +1,10 @@
+import { useCart } from "../../contexts/useCart";
 import style from "./footer.module.css";
 import { NavLink } from "react-router-dom";
 import Logo from "../Header/Logo";
 
 const Footer = () => {
+  const { cart } = useCart();
   return (
     <footer>
       <div className={`${style.logo} ${style.logo}`}>
@@ -48,6 +50,11 @@ const Footer = () => {
               to={`cart`}
             >
               Cart
+              {cart && cart.length > 0 ? (
+                <span className={style.navCartAmount}>{cart.length}</span>
+              ) : (
+                ""
+              )}
             </NavLink>
           </li>
         </ul>
