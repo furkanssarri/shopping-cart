@@ -12,7 +12,18 @@ const Shop = () => {
   const { cart, setCart } = useCart();
 
   const handleAddToCart = (item) => {
-    setCart([...cart, item]);
+    const existingItem = cart.find((cartItem) => cartItem.id === item.id);
+
+    if (existingItem) {
+      const updatedCart = cart.map((cartItem) =>
+        cartItem.id === item.id
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem,
+      );
+      setCart(updatedCart);
+    } else {
+      setCart([...cart, { ...item, quantity: 1 }]);
+    }
   };
 
   if (error) return <p>{error}</p>;
