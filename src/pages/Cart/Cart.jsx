@@ -1,12 +1,15 @@
 import styles from "./cart.module.css";
-import { useCart } from "../../contexts/CartContext";
+import { useCart } from "../../contexts/useCart";
 
 const Cart = () => {
-  const { cartItems } = useCart();
+  const { cart } = useCart();
 
   return (
     <div className={styles.cartContainer}>
-      {cartItems && cartItems.map((item) => <div>{item.name}</div>)}
+      {cart &&
+        cart.map((item, index) => (
+          <div key={item.id || index}>{item.title}</div>
+        ))}
     </div>
   );
 };

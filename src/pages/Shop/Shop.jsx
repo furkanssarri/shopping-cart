@@ -2,7 +2,7 @@ import styles from "./shop.module.css";
 import { Link, Outlet } from "react-router-dom";
 import useData from "../../utils/useData";
 import ProductThumbNail from "../../components/product-thumbnail/ProductThumbNail";
-import { useCart } from "../../contexts/CartContext";
+import { useCart } from "../../contexts/useCart";
 
 const Shop = () => {
   const { data, error, isLoading } = useData(
@@ -13,7 +13,6 @@ const Shop = () => {
 
   const handleAddToCart = (item) => {
     setCart([...cart, item]);
-    console.log(cart);
   };
 
   if (error) return <p>{error}</p>;
