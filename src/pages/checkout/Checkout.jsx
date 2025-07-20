@@ -6,7 +6,7 @@ const Checkout = () => {
 
   useEffect(() => {
     setCart([]);
-  }, []);
+  }, [setCart]);
 
   return (
     <div>
