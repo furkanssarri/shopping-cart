@@ -55,13 +55,11 @@ const Button = ({
 
   return (
     <StyledButton
-      variant={variant}
-      disableShadow={disableShadow}
+      $variant={variant}
+      $disableShadow={disableShadow}
+      $size={size}
+      $color={color}
       disabled={disabled}
-      startIcon={startIcon}
-      endIcon={endIcon}
-      size={size}
-      color={color}
       onClick={onClick}
       title={title}
       {...rest}

@@ -24,10 +24,10 @@ const sizes = {
 
 const StyledButton = styled.button`
   border-radius: 6px;
-  padding: ${(props) => props.size && sizes[props.size]};
-  box-shadow: ${(props) => (props.disableShadow ? shadow[0] : shadow[1])};
+  padding: ${(props) => props.$size && sizes[props.$size]};
+  box-shadow: ${(props) => (props.$disableShadow ? shadow[0] : shadow[1])};
   border: ${(props) =>
-    props.variant === "outline" ? `1px solid ${colors.text.blue}` : "none"};
+    props.$variant === "outline" ? `1px solid ${colors.text.blue}` : "none"};
   font-family: "Noto Sans JP";
   font-size: 14px;
   font-style: normal;
@@ -45,31 +45,31 @@ const StyledButton = styled.button`
   background: ${colors.backgrounds.default[0]};
 
   ${(props) => {
-    if (props.color)
+    if (props.$color)
       return `
-      background: ${colors.backgrounds[props.color][0]};
+      background: ${colors.backgrounds[props.$color][0]};
       color: ${
-        props.color === "default" ? colors.text.black : colors.text.white
+        props.$color === "default" ? colors.text.black : colors.text.white
       };
     `;
   }}
 
   ${(props) => {
-    if (props.variant === "default")
+    if (props.$variant === "default")
       return `background: ${colors.backgrounds.default};`;
-    if (props.variant === "outline")
+    if (props.$variant === "outline")
       return `background: none; color: ${colors.text.blue};`;
-    if (props.variant === "text")
+    if (props.$variant === "text")
       return `background: none; box-shadow: none;  color: ${colors.text.blue};`;
   }}
 
   &:hover {
     background-color: ${(props) => {
-      if (props.variant === "default") return colors.backgrounds.default[1];
-      if (props.variant === "outline") return colors.backgrounds.outline[1];
-      if (props.variant === "text") return colors.backgrounds.outline[1];
+      if (props.$variant === "default") return colors.backgrounds.default[1];
+      if (props.$variant === "outline") return colors.backgrounds.outline[1];
+      if (props.$variant === "text") return colors.backgrounds.outline[1];
 
-      if (props.color) return colors.backgrounds[props.color][1];
+      if (props.$color) return colors.backgrounds[props.$color][1];
       return colors.backgrounds.default[1];
     }};
   }
@@ -77,7 +77,7 @@ const StyledButton = styled.button`
   &:disabled {
     color: ${colors.text.disabled};
     background-color: ${colors.backgrounds.default[0]};
-    ${(props) => (props.variant === "text" ? "background: none;" : undefined)}
+    ${(props) => (props.$variant === "text" ? "background: none;" : undefined)}
     cursor: unset;
     box-shadow: none;
   }
