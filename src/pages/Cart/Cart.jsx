@@ -70,7 +70,7 @@ const Cart = () => {
                       onClick={() => handleRemoveItem(item)}
                       title="Remove item"
                     >
-                      🗑️
+                      Remove
                     </button>
                   </div>
                 </div>
