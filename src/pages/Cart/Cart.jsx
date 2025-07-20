@@ -5,6 +5,10 @@ import { Link, Outlet } from "react-router-dom";
 const Cart = () => {
   const { cart, setCart } = useCart();
 
+  const totalPrice = cart
+    .reduce((total, item) => total + item.price * item.quantity, 0)
+    .toFixed(2);
+
   // Increase quantity
   const handleAdd = (item) => {
     setCart((prevCart) =>
@@ -80,6 +84,7 @@ const Cart = () => {
               </li>
             ))}
           </ul>
+          <p className={styles.price}>Total: ${totalPrice}</p>
           <Link to={`/checkout`} className={styles.checkoutBtn}>
             Checkout
           </Link>
