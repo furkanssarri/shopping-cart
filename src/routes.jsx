@@ -1,6 +1,7 @@
 import App from "./App";
 import About from "./pages/about/About";
 import Cart from "./pages/Cart/Cart";
+import Checkout from "./pages/checkout/Checkout";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/home/Home";
 import Product from "./pages/Product/Product";
@@ -27,6 +28,10 @@ const routes = [
       {
         path: "cart",
         element: <Cart />,
+      },
+      {
+        path: "checkout",
+        element: <Checkout />,
       },
       {
         path: "about",

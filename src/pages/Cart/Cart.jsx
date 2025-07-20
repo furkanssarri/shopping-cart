@@ -1,12 +1,40 @@
 import styles from "./cart.module.css";
 import { useCart } from "../../contexts/useCart";
+import { Link, Outlet } from "react-router-dom";
 
 const Cart = () => {
-  const { cart } = useCart();
+  const { cart, setCart } = useCart();
 
-  // Dummy handlers for add/remove (replace with your logic)
-  const handleAdd = (item) => {};
-  const handleRemove = (item) => {};
+  // Increase quantity
+  const handleAdd = (item) => {
+    setCart((prevCart) =>
+      prevCart.map((cartItem) =>
+        cartItem.id === item.id
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem,
+      ),
+    );
+  };
+
+  // Decrease quantity (remove if quantity is 1)
+  const handleRemove = (item) => {
+    setCart((prevCart) =>
+      prevCart
+        .map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem,
+        )
+        .filter((cartItem) => cartItem.quantity > 0),
+    );
+  };
+
+  // Remove item completely
+  const handleRemoveItem = (item) => {
+    setCart((prevCart) =>
+      prevCart.filter((cartItem) => cartItem.id !== item.id),
+    );
+  };
 
   return (
     <div className={styles.cartContainer}>
@@ -37,6 +65,13 @@ const Cart = () => {
                     >
                       +
                     </button>
+                    <button
+                      className={styles.removeBtn}
+                      onClick={() => handleRemoveItem(item)}
+                      title="Remove item"
+                    >
+                      🗑️
+                    </button>
                   </div>
                 </div>
                 <div className={styles.price}>
@@ -45,7 +80,10 @@ const Cart = () => {
               </li>
             ))}
           </ul>
-          <button className={styles.checkoutBtn}>Checkout</button>
+          <Link to={`/checkout`} className={styles.checkoutBtn}>
+            Checkout
+          </Link>
+          <Outlet />
         </>
       ) : (
         <p className={styles.empty}>Your cart is empty.</p>
